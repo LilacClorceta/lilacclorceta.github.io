@@ -1,0 +1,73 @@
+/* Typography */
+@font-face {
+	font-family: 'Xinhua KatTi';
+	size-adjust: 130%;
+	src: url('../fonts/XinHuaKaiTi-1.ttf') format(truetype);
+	/* https://www.fonts.net.cn/font-33631233667.html */
+}
+
+@font-face {font-family: 'PingFang SC';font-weight: 400;src: url('../fonts/PingFang-SC-Regular.ttf') format(truetype);}
+@font-face {font-family: 'PingFang SC';font-weight: 700;src: url('../fonts/PingFang-SC-Bold.ttf') format(truetype);}
+@font-face {font-family: 'PingFang SC';font-weight: 300;src: url('../fonts/PingFang-SC-Light.ttf') format(truetype);}
+
+@font-face{font-family:"Libre Baskerville";font-style:normal;font-weight:400;font-display:fallback;src:url('../fonts/Libre-Baskerville.ttf') format('truetype');}
+@font-face{font-family:"Libre Baskerville";font-style:italic;font-weight:400;font-display:fallback;src:url('../fonts/Libre-Baskerville-Italic.ttf') format('truetype');}
+@font-face{font-family:"Libre Baskerville";font-style:normal;font-weight:700;font-display:fallback;src:url('../fonts/Libre-Baskerville-Italic.ttf') format('truetype');}
+
+@font-face {font-family: 'Gontserrat';font-style: normal;font-weight: 200;src: url('../fonts/gontserrat/Gontserrat-Thin.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: italic;font-weight: 200;src: url('../fonts/gontserrat/Gontserrat-ThinItalic.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: normal;font-weight: 200;src: url('../fonts/gontserrat/Gontserrat-ExtraLight.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: italic;font-weight: 200;src: url('../fonts/gontserrat/Gontserrat-ExtraLightItalic.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: normal;font-weight: 300;src: url('../fonts/gontserrat/Gontserrat-Light.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: italic;font-weight: 300;src: url('../fonts/gontserrat/Gontserrat-LightItalic.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: normal;font-weight: 400;src: url('../fonts/gontserrat/Gontserrat-Regular.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: italic;font-weight: 400;src: url('../fonts/gontserrat/Gontserrat-Italic.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: normal;font-weight: 500;src: url('../fonts/gontserrat/Gontserrat-Medium.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: italic;font-weight: 500;src: url('../fonts/gontserrat/Gontserrat-MediumItalic.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: normal;font-weight: 600;src: url('../fonts/gontserrat/Gontserrat-SemiBold.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: italic;font-weight: 600;src: url('../fonts/gontserrat/Gontserrat-SemiBoldItalic.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: normal;font-weight: 700;src: url('../fonts/gontserrat/Gontserrat-Bold.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: italic;font-weight: 700;src: url('../fonts/gontserrat/Gontserrat-BoldItalic.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: normal;font-weight: 800;src: url('../fonts/gontserrat/Gontserrat-ExtraBold.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: italic;font-weight: 800;src: url('../fonts/gontserrat/Gontserrat-ExtraBoldItalic.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: normal;font-weight: 900;src: url('../fonts/gontserrat/Gontserrat-Black.ttf') format(truetype);}
+@font-face {font-family: 'Gontserrat';font-style: italic;font-weight: 900;src: url('../fonts/gontserrat/Gontserrat-BlackItalic.ttf') format(truetype);}
+
+*{
+	--font-stack-sans-serif: 'Gontserrat', 'PingFang SC', sans-serif;
+	--font-stack-serif: 'Libre Baskerville', 'Xinhua Kaiti', serif;
+	--font-stack-headings: ;
+	--font-stack-decor: ;
+}
+
+body{
+	font-family: var(--font-stack-sans-serif) !important;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Libre Baskerville', 'Xinhua Kaiti', serif !important;
+}
+header{
+	font-family: var(--font-stack-serif);
+}
+.liana{
+	font-family: 'Libre Baskerville' !important;
+	font-size: 16pt;
+}
+a{
+
+}
+
+
+.stuff{
+	li{
+		list-style: ;
+	}
+}
+
+.index{
+	flex-direction: row-reverse;
+	justify-content: space-around;
+}
+.page{
+	margin-top: 20px;
+}
