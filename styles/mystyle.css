@@ -1,6 +1,6 @@
 /* Typography */
 @font-face {
-	font-family: 'Xinhua KatTi';
+	font-family: 'Xinhua Kaiti';
 	size-adjust: 130%;
 	src: url('../fonts/XinHuaKaiTi-1.ttf') format(truetype);
 	/* https://www.fonts.net.cn/font-33631233667.html */
@@ -51,7 +51,15 @@ header{
 }
 .liana{
 	font-family: 'Libre Baskerville' !important;
-	font-size: 16pt;
+	font-style: italic;
+	font-size: 1.5rem;
+	@media (min-width:768px){
+		position: sticky;
+		top: 13rem;
+		align-self: flex-start
+	}
+	@media (min-width:992px){}
+	@media (min-width:1200px){}
 }
 a{
 
