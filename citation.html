@@ -1,15 +1,18 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Custom Citation System - Climbing Vine</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<title>Custom Citation System - Climbing Vine</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link rel="stylesheet" href="styles/mystyle.css">
 	<style>
 	</style>
-  </head>
-  <body>
+</head>
+
+<body>
 	<div class="container">
 		<header class="d-flex flex-wrap justify-content-center align-items-center py-2">
 			<div class="site-title mb-md-0 me-auto">Liana</div>
@@ -31,19 +34,19 @@
 			<p>So what kinds of things will I need to take under consideration when designing this custom citation system?</p>
 			<ul>
 				<li>Usecases</li>
-					<ul>
-						<li>Footnotes on the MTD</li>
-						<li>Discord messages - aka, there needs to be a short and really fast to type quick-cite method</li>
-						<li>Articles on this website</li>
-					</ul>
+				<ul>
+					<li>Footnotes on the MTD</li>
+					<li>Discord messages - aka, there needs to be a short and really fast to type quick-cite method</li>
+					<li>Articles on this website</li>
+				</ul>
 				<li>Common source types</li>
-					<ul>
-						<li>MTD</li>
-						<li>Ancient Chinese poetry anthologies</li>
-						<li>Ancient Chinese classics</li>
-						<li>Modern English translations of the above, sometimes multiple translations for the same Chinese source</li>
-						<li>Websites in Chinese that I may be using machine translation to understand, with the accompanying possibility of error</li>
-					</ul>
+				<ul>
+					<li>MTD</li>
+					<li>Ancient Chinese poetry anthologies</li>
+					<li>Ancient Chinese classics</li>
+					<li>Modern English translations of the above, sometimes multiple translations for the same Chinese source</li>
+					<li>Websites in Chinese that I may be using machine translation to understand, with the accompanying possibility of error</li>
+				</ul>
 			</ul>
 			<h2>part the third: a review of existing citation systems</h2>
 			<p>I'm a dumbass, but I'm not <i>stupid</i>. People have already done the work of developing citation systems already. I'm not gonna use them wholesale, but I can and will cannibalize them for parts.</p>
@@ -61,40 +64,120 @@
 			<p><a href="https://www.chicagomanualofstyle.org/tools_citationguide.html">Chicago Style Citation Quick Guide</a></p>
 			<p>The Chicago style is the one I am most familiar with, as it is the standard for history and social sciences.</p>
 			<p>I don't think there's anything particularly transcendental about the Chicago style, which is part of its appeal. It's ordinary and plain, and that makes it fairly intuitive to use once you learn the patterns of it. It's just a repeating pattern of Autor, Title, In, until you get to the publisher. </p>
-			<p>Chicago style does not have reference entries in A-D format for sources with no author. </p>
+			<p>There are two forms of the Chicago style: the Notes and Bibliography style (N&B) and the Author-Date style (A-D). N&B uses in-text superscript, short citation footnotes, and a bibliography. A-D uses in-text parentheticals.</p>
+			<p>N&B style is more flexible with its sources than A-D. A-D, notably, cannot accomodate sources with no author. Sources with no author are simply left out of the reference list, even when they are important. The best that can be done in A-D style in that case is to describe the source in-text, which is inefficient in space and readers' time.</p>
+			<p>The bibliography entries of N&B style and the reference entries of A-D style are formatted very similarly. Broadly, they go:
+				<blockquote>Authorial information. Source title. Source container information. Editorial information. Publication information. Format information.</blockquote>
+			Exceptions are made for websites, where date information is included immediately after the author name. The same exception is <em>not</em> made for social media posts, which are formatted like articles if they are included in the bibliography at all. The reason for this exception is unclear, so I will absolutely not be adapting it. 
+			</p>
+			<!-- <p>For books:
+				<blockquote>Author, and Other Authors. <i>Title</i>. Translated/Edited/Commentated by Translator/Editor/Commentator. Location: Publisher, Date. Format/Database/URL.</blockquote>
+			</p>
+			<p>For chapters:
+				<blockquote>Author. "Title." In <i>Book Title</i>, edited by Editor, chapter page numbers. Location: Publisher, Date.</blockquote>
+			</p>
+			<p>For journal articles:
+				<blockquote>Author, Other Authors, In Alphabetical Order, and Up To Ten. "Article Title, in full: Including all Punctuation etc." <i>Journal Title</i> Vol#, no. # (Date): Page Numbers. DOI/Database/URL.</blockquote>
+			News articles are formatted likewise, save that the date of the article's publication replaces the volume number.
+			</p> -->
+
 			<h4>The American Anthropological Association</h4>
 			<p><a href="https://americananthro.org/publications/publishing-style-guide/">AAA Style Guide</a></p>
-			<p>AAA style is an offshoot of Chicago style. It's broadly similar to the in-text Author-Date style. Page ranges are only used for quotations or very specific information. The reference list is the same as in the Chicago style.</p>
-			<p>(Author, Date, page range; other citations)</p>
+			<p>AAA style is an offshoot of Chicago style. It's broadly similar to the in-text Author-Date style. Page ranges are only used for quotations or very specific information. The reference list is the same as in the Chicago style. In-text citations use the Wiley style. Of note there is the use of semi-colons to seperate multiple citations supporting the same piece of information.</p>
 			<p></p>
 			<h3>Styles developed for a digital context</h3>
 			<h4>Wikipedia</h4>
 			<p>In particular, I want to look at the formatting rules for a digital context. MLA and Chicago are both intended for print or journal contexts, and so have rules about things like print margins and page numbers, both of which are not relevant to a digital format.</p>
-			<p></p>
+			<p><a href="https://en.wikipedia.org/wiki/Help:Introduction_to_the_Manual_of_Style/1">Introduction to Wikipedia Manual of Style</a>
+				<br><a href="https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style">Wikipedia Manual of Style</a>
+				<br><a href="https://en.wikipedia.org/wiki/Help:Referencing_for_beginners">Help:Referencing For Beginners</a>
+				<br><a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources">Wikipedia:Citing Sources</a>
+				<br><a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources/Further_considerations">Wikipedia:Citing Sources - Further Considerations</a>
+			</p>
+			<p>Wikipedia's basic guidelines on citations are that they should be consistent &mdash; the same as the style already used in the article, even if that is different from the default style &mdash; and should provide enough information for a reader to identify the source. The formatting can be improved later, but if a source can't be identified, it's a bad citation.</p>
+			<p>Wikipedia's manual of style also has clear and simple instructions on <em>when</em> to cite sources.</p>
+			<ul>
+				<li>All quotations</li>
+				<li>Any challenged or likely to be challenged information</li>
+				<li>Contentious or controversial material about living persons</li>
+			</ul>
+			<p>Wikipedia uses a system of superscript numbers for inline citations, which correspond to a reference list at the end of the article. Unique to the digital structure, Wikipedia's in-line citations hyperlink to the corresponding reference and vice versa, along with having a tooltip appear with the reference information when the hyperlink is hovered over. This allows users to easily view the full source information without losing their place in the text, and with a very efficient use of space in the content and on the page. Citations citing specific sections of a source use the full source with the section included if it is the first time this source is cited, and after use a shortened citation beginning with "Op. Cit." to indicate that the reference has already been used. (Other citation styles are allowed by Wikipedia, including one that has seperate Note and Reference sections, however, I think this is inefficient and visually repetative, as both are placed at the bottom of the article, one right after the other.)</p>
+			<p>Wikipedia's MOS does allow for general references &mdash; references not attached to any specific inline citation. General references are listed after references with inline citations in the reference list. </p>
+			<p>Wikipedia does make use of access dates, listed as "Retrieved" at the end of the reference. For Wikipedia's level of specificity, its frequent editing, and its frequent interaction with highly mutable sites, this is reasonable.</p>
+			<p>In its "Further Considerations" article, Wikipedia's MOS advises cleaning up URLs before using them in citations. I.e. removing session IDs, tracking parameters, trailing slashes on root urls, using desktop links, etc., generally ensuring the URL is as standard as it can be made. It also advises using a pre-emptive archive URL where possible. For me, this would change to "where reasonable", but when citing highly mutable sites, I think this is very reasonable.</p>
+			<p>Wikipedia's linked citations work differently on the .m site vs the desktop site. In the mobile site, a javascript script triggers a "drawer" div to be added to the page, and then deleted when you click out of the drawer. This allows the citation to pop up in a readable format for the mobile user, without mistaking a "tap to bring up the citation tooltip" for a "click to go to the reference section". However, it doesn't allow jumping to the reference section. Is this a loss, on mobile?</p>
 			<h3>Styles used in Chinese-English context</h3>
 			<h4>Journal of Chinese Literature and Culture</h4>
 			<p><a href="https://www.dukeupress.edu/Assets/Downloads/JCLC_Submission_Guidelines.pdf">JCLC Submission Guidelines</a></p>
 			<p>
-				Nienhauser, William H, Jr. "Tetrasyllabic <i>Shi</i> Poetry: <i>The Book of Poetry (Shijing)</i>." In <i>How to Read Chinese Poetry</i>, edited by Cai Zong-qi. New York: Columbia University Press, 2008.
-				Qu Yuan 屈原. <i>Li Sao</i> 離騷 (Encountering Sorrow), in <i>Chu Ci</i> 楚辭 (Songs of Chu), compiled by Liu Xiang 劉向 ({Dates of life}). Wikisource. 
-				Qu Yuan. <i>Li Sao</i>. Translated by David Hawkes. London: Penguin Classics, 1985. 
-				in <i>The Songs of the South: An Ancient Chinese Anthology of Poems by Qu Yuan and Other Poets.</i>
+				Nienhauser, William H, Jr. "Tetrasyllabic <i>Shi</i> Poetry: <i>The Book of Poetry (Shijing)</i>." In <i>How to Read Chinese Poetry</i>, edited by Cai Zong-qi. New York: Columbia University Press, 2008. Qu Yuan 屈原. <i>Li Sao</i> 離騷 (Encountering Sorrow), in <i>Chu Ci</i> 楚辭 (Songs of Chu), compiled by Liu Xiang 劉向 ({Dates of life}). Wikisource.
+				Qu Yuan. <i>Li Sao</i>. Translated by David Hawkes. London: Penguin Classics, 1985. in <i>The Songs of the South: An Ancient Chinese Anthology of Poems by Qu Yuan and Other Poets.</i>
 			</p>
 			<h4>Harvard Journal of Asiatic Studies</h4>
 			<p><a href="https://hjas.org/sites/default/files/media/file/HJAS%20Style%20Sheet%202022.pdf">HJAS Style Sheet</a><br>
 				Endymion Wilkinson, Chinese History: A Manual, 4th ed. (Cambridge, MA: Harvard University Asia Center, 2015); see especially pp. xvii–xxiii.
 			</p>
+			<p>"The guiding principle for HJAS citation style is that nonspecialist readers (such as beginning graduate students) interested in following up on any specific citation must be able to find the quoted or referenced passage in the work and must have sufficient information to locate and access the source material (either through interlibrary loan or an in-person visit)"</p>
+			<p>Pre-modern and indigenous measurements should have metric conversions in parentheses. The American units can be added as a bonus.</p>
+			<p>Where names or terms change over time, use the preferred name (as far as it can be determined) or the most commonly used term in the text, and provide the term as used in the source in the notes. Alternate names are typically provided in square brackets. This is done so other works by the same author may be more easily found.</p>
+			<p>Romanizations should be italicized for every instance if the term is not anglicized. Names are not italicized. When an author of Asian heritage also publishes in English, their preferred Romanization should be respected. The order of names should match the language they published in. Lastname, Firstname structure is not used in references. Preferred Romanization styles are provided for Chinese, Japanese, Korean, Manchu, Mongolian, Tibetan, Russian, Sanskrit, Arabic, and Turkic. Translations of Asian-language sources are not provided in the notes.</p>
+			<p>This journal prefers "PMingLiU" as its font, which I'm pretty sure is just Microsoft's name for its Songtai font for traditional characters.</p>
+			<p>Both the volume (ce 册) number of the specific edition of a historical source should be included, as well as the traditional juan 卷 number. Same for page numbers &mdash; both the modern and traditional should be included. The full edition citation information should be provided for even the most well-known historical sources. There is also a note about digital sources and ctext.org in particular, about citing authoritative sources and that digital sources may not be authoritative. This is something to be considered, as an amateur researcher I don't have the time or resources to track down authoritative sources or ensure concordance.</p>
+			<p>There is a vast deal more material on style in the Endymion Wilkinson textbook. I have skimmed it, but not reviewed it in depth. I will likely return and consult it in the future, but I don't think it will be necessary for a citation system.</p>
 			<h4>Journal of Asian Studies (Duke University)</h4>
 			<p><a href="https://dukeupress.edu/Assets/Downloads/JAS_style_guide.pdf">JAS Style Sheet</a></p>
+			<p><i>Transcription</i> &lt;Original Characters&gt; [English translation.] is used for presenting Asian scripts in references. In the text, the translated or original may be presented first, and the other presented in parentheses afterwards. The translated title uses the form it would take if it were a published translation, even if there is no published translation.</p>
+			<p>Latin abbreviations should be spelled out in the text or avoided. Abbreviations are permitted in notes. Grammar and capitalization in quotes should be ammended to match the context of where it is used.</p>
 			<h4>China Quarterly</h4>
 			<p><a href="https://www.cambridge.org/core/journals/china-quarterly/information/author-instructions/preparing-your-materials">Author Instructions: Preparing Materials</a></p>
+			<p>
+				<blockquote>
+					<strong>Romanization.</strong> Use <i>pinyin</i> without tone/diacritical marks, except: Chiang Kai-shek, Sun Yat-sen, Taipei, Kuomintang, Peking University, Tsinghua University, names of people living outside mainland China.
+					<br>
+					<br>
+					<strong>Chinese characters.</strong> Chinese characters are incorporated into article texts (i.e. English (pinyin, characters)) so authors must provide Chinese characters for all Chinese phrases and proper nouns used in the main text (not footnotes) on first appearance. Characters for people’s names and geographical locations should follow the pinyin transcription without brackets. However, Chinese characters are not needed for names of provinces, municipalities and provincial capitals.
+				</blockquote>
+			</p>
+			<p>Pinyin words are not capitalized unless they are proper nouns. Characters of original titles for sources are not necessarily used in sources (an oversight, imo). </p>
 			<h4>Modern Chinese Literature and Culture </h4>
 			<p><a href="https://www.euppublishing.com/pb-assets/Journals%20website/Author%20Guidelines/MCLC_style_for_authors-1621586373.pdf">MCLC Style Guide</a></p>
+			<p>Pinyin or other Romanization terms are italicized, but proper names are not. For repeated use, subsequent italization is optional. English translation is placed first in the text, with pinyin following after in parenthesis. This may be reversed in some cases. Subsequent mentions should use English unless there is good reason not to. Chinese characters are only used "for poetry or to highlight points about language." I disagree with this use, as it conceals the specific nuance and connotation that may be assigned to the original term, and not including the characters makes it harder for people to find more information about the subject, especially when dealing with niche topics that may not have extensive English resources about them or be commonly searched for.</p> 
+			<p>In references, the <i>Pinyin</i> &lt;Characters&gt; (Translation) structure is used. Character are not provided for publishers or journals &mdash; the name is presented as it commonly is in English, or in Pinyin with "chubanshe" or "press" or similar category names omitted. An older style of Chicago style is used where dates are placed immediately after the name of the author.</p>
+			<p>A glossary of Chinese terms should be included at the end of the article. Names of dynasties, provinces, large municipalities, and authors included in the reference list, should not be included.</p>
 			<h4>Hong Kong University Journal of Chinese Studies</h4>
 			<p><a href="https://www.hkujcs.hku.hk/style-sheet-english">English Style Sheet</a></p>
+			<p>This journal, like most of the others, bases their style off of the Chicago style</p>
+			<p>The Pinyin Romanization system specifically is used, and all terms are presented in the <i>Pinyin</i> &lt;Characters&gt; (Translation) structure. In references, the parentheses are exchanged for brackets.</p>
+			<p>The first time a historical figure is mentioned, provide their birth and death dates, and their Chinese name if there is one. Include a BCE/CE date in parentheses after a date in Chinese dynastic chronology.</p>
+			<p>Simplified characters should be changed to traditional characters.</p>
+			<p>This has the most extensive examples of Chinese sources cited, and may be the most useful in that regards.</p>
+			<h2>part the fourth: conclusions from the review</h2>
+			<h2>part the ?: an ongoing list of notes and thoughts</h2>
+			<ul>
+				<li>Cite specific page numbers only for quotes, in the in-line text citation.</li>
+				<li>If you don't need to include a quote, you don't need the level of specificity of page numbers.</li>
+				<li>if the information you're using is so specific that you feel you should include specific page numbers, you should probably also be including a quote.</li>
+				<li>There should be a difference in the way that star sources and side sources are cited.</li>
+				<ul>
+					<li>Star sources should be cited very specifically, with as much detail as possible, in all cases. E.g. page numbers always, and also chapter and section.</li>
+					<li>Side sources should be cited more generally, with enough information to find the source, but not necessarily the specific detail.</li>
+				</ul>
+				<li>a list of things i will need styles for:</li>
+				<ul>
+					<li>Artifacts</li>
+					<li>Books</li>
+					<li>Journal articles</li>
+					<li>Websites</li>
+					<li>Social media posts</li>
+					<li>Classical texts/classics</li>
+					
+				</ul>
+			</ul>
+			<p><a href="https://pinyin.info/readings/zyg/rules.html">sticks a link to pinyin.info here</a></p>
 		</main>
 	</div>
-  </body>
+</body>
+
 </html>
 
 
@@ -109,15 +192,18 @@
 
 Modern academic works
 Ancient works
-Qu Yuan 屈原 (339-278 BCE), <i>Li Sao</i> 離騷 (Encountering Sorrow), in <i>Chu Ci</i> 楚辭 (Songs of Chu). <a href="https://zh.wikisource.org/wiki/%E6%A5%9A%E8%BE%AD">Wikisource</a>.
-<i>Li Sao</i> 離騷 (Encountering Sorrow). Translated by David Hawkes, in <i>The Songs of the South: An Ancient Chinese Anthology of Poems by Qu Yuan and Other Poets</i>. London: Penguin Classics, 1985. 
+Qu Yuan 屈原 (339-278 BCE), <i>Li Sao</i> 離騷 (Encountering Sorrow), in <i>Chu Ci</i> 楚辭 (Songs of Chu). <a
+	href="https://zh.wikisource.org/wiki/%E6%A5%9A%E8%BE%AD">Wikisource</a>.
+<i>Li Sao</i> 離騷 (Encountering Sorrow). Translated by David Hawkes, in <i>The Songs of the South: An Ancient Chinese
+	Anthology of Poems by Qu Yuan and Other Poets</i>. London: Penguin Classics, 1985.
 
 
-<p>{{ Author }} {{ AuthorHanzi }} ({{ DOB-DOD }} {{ BCE/CE }}), <i>{{ TitlePinyin }}</i> {{ TitleHanzi }} ({{ TitleEnglish }}), in <i>{{ CollectionPinyin }}</i> {{ CollectionHanzi }} ({{ CollectionEnglish }}). Originally written in {{ Era }}. <a href="">{{ Source }}</a>.
-<br>{{ Poem }}. Translated by {{ Translator }}, in <i>{{ Anthology }}</i>. {{ Publisher }}, {{ DatePublished }}.</p>
+<p>{{ Author }} {{ AuthorHanzi }} ({{ DOB-DOD }} {{ BCE/CE }}), <i>{{ TitlePinyin }}</i> {{ TitleHanzi }} ({{
+	TitleEnglish }}), in <i>{{ CollectionPinyin }}</i> {{ CollectionHanzi }} ({{ CollectionEnglish }}). Originally
+	written in {{ Era }}. <a href="">{{ Source }}</a>.
+	<br>{{ Poem }}. Translated by {{ Translator }}, in <i>{{ Anthology }}</i>. {{ Publisher }}, {{ DatePublished }}.
+</p>
 
 
 Titles of books in Chinese:
 <i>{{ Transcription }}</i> {{ Characters }} ({{ EnglishTranslation }}).
-
-
