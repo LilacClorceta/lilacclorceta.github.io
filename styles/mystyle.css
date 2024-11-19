@@ -79,3 +79,12 @@ a{
 .page{
 	margin-top: 20px;
 }
+
+.citation{
+	margin-left: 4rem;
+	text-indent: -4rem;
+}
+
+.subcite{
+	margin-left: -1rem;
+}

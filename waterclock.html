@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ Page Title }} - Climbing Vine</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles/mystyle.css">
+		<style>
+			.clock-viewport{
+				font-family: var(--font-stack-serif) !important;
+				overflow: hidden;
+				height: 70vh;
+				width: 20rem;
+				margin-top: 50px;
+				margin-left:auto;
+				margin-right: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				border-style: solid;
+			}
+			.shi, .ke{
+				border-style: solid;
+				border-width: thin;
+				display: flex;
+				flex-direction: column;
+				align-items: baseline;
+				justify-content: space-between;
+			}
+			.shi{
+				font-size: 2.4rem;
+				border-right-width: thin;
+			}
+			.ke{
+				font-size: .8rem;
+				border-left-width: thin;
+			}
+			.number{
+				/* user-select: none; how to turn off select easy */
+				width: 100%;
+				height: 100%;
+				border-bottom-style: solid;
+				border-bottom-width: thin;
+				display: grid;
+				place-items: center;
+				transition: all 500ms 100ms ease;
+			}
+			.number-pop{
+				font-weight: bold;
+				transform: scale(1.3);
+			}
+			.shike-clock{
+				height: 2400px;
+				display: flex;
+				flex-direction: row;
+				position: relative;
+				top:1200px;
+				/* animation: slide_up 3s; */
+			}
+			.pinyin{
+				font-size: 1rem;
+			}
+			.arrowbar{
+				height: 1px;
+				width: 200px;
+				background-color: black;
+				position: absolute;
+			}
+			.triangle-left{
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 10px 30px 10px 0;
+				border-color: transparent black transparent transparent;
+				
+			}
+			.triangle-right{
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 10px 0 10px 30px;
+				border-color: transparent transparent transparent black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header class="d-flex flex-wrap justify-content-center align-items-center py-2">
+				<div class="site-title mb-md-0 me-auto">Liana</div>
+				<nav class="">
+					<ul class="nav">
+						<li class="nav-item"><a class="nav-link" href="index.html">home</a></li>
+					</ul>
+				</nav>
+			</header>
+			<main class="page container">
+				<h1>{{ Page Title }}</h1>
+				<button type="button" onclick="currentTimeMath()" id="currentButton">Current Time</button>
+				<form id="TimeConverter">
+					<input type="time" name="fromTime">
+				</form>
+				<button type="submit" id="convertButton">Convert</button>
+				<div class="clock-viewport">
+					<div class="arrowbar"></div>
+					<div class="triangle-right"></div>
+					<div class="shike-clock">
+						<div class="shi">
+							<div class="number" id="zi-c">子正</div>
+							<div class="number" id="chou">丑初<span class="pinyin">(chou)</span></div>
+							<div class="number" id="chou-c">丑正</div>
+							<div class="number" id="yin">寅初<span class="pinyin">(yin)</span></div>
+							<div class="number" id="yin-c">寅正</div>
+							<div class="number" id="mao">卯初<span class="pinyin">(mao)</span></div>
+							<div class="number" id="mao-c">卯正</div>
+							<div class="number" id="chen">辰初<span class="pinyin">(chen)</span></div>
+							<div class="number" id="chen-c">辰正</div>
+							<div class="number" id="si">巳初<span class="pinyin">(si)</span></div>
+							<div class="number" id="si-c">巳正</div>
+							<div class="number" id="wu">午初<span class="pinyin">(wu)</span></div>
+							<div class="number" id="wu-c">午正</div>
+							<div class="number" id="wei">未初<span class="pinyin">(wei)</span></div>
+							<div class="number" id="wei-c">未正</div>
+							<div class="number" id="shen">申初<span class="pinyin">(shen)</span></div>
+							<div class="number" id="shen-c">申正</div>
+							<div class="number" id="you">酉初<span class="pinyin">(you)</span></div>
+							<div class="number" id="you-c">酉正</div>
+							<div class="number" id="xu">戌初<span class="pinyin">(xu)</span></div>
+							<div class="number" id="xu-c">戌正</div>
+							<div class="number" id="hai">亥初<span class="pinyin">(hai)</span></div>
+							<div class="number" id="hai-c">亥正</div>
+							<div class="number" id="zi">子初<span class="pinyin">(zi)</span></div>
+						</div>
+						<div class="ke">
+							<div class="number" id="k1">1</div>
+							<div class="number" id="k2">2</div>
+							<div class="number" id="k3">3</div>
+							<div class="number" id="k4">4</div>
+							<div class="number" id="k5">5</div>
+							<div class="number" id="k6">6</div>
+							<div class="number" id="k7">7</div>
+							<div class="number" id="k8">8</div>
+							<div class="number" id="k9">9</div>
+							<div class="number" id="k10">10</div>
+							<div class="number" id="k11">11</div>
+							<div class="number" id="k12">12</div>
+							<div class="number" id="k13">13</div>
+							<div class="number" id="k14">14</div>
+							<div class="number" id="k15">15</div>
+							<div class="number" id="k16">16</div>
+							<div class="number" id="k17">17</div>
+							<div class="number" id="k18">18</div>
+							<div class="number" id="k19">19</div>
+							<div class="number" id="k20">20</div>
+							<div class="number" id="k21">21</div>
+							<div class="number" id="k22">22</div>
+							<div class="number" id="k23">23</div>
+							<div class="number" id="k24">24</div>
+							<div class="number" id="k25">25</div>
+							<div class="number" id="k26">26</div>
+							<div class="number" id="k27">27</div>
+							<div class="number" id="k28">28</div>
+							<div class="number" id="k29">29</div>
+							<div class="number" id="k30">30</div>
+							<div class="number" id="k31">31</div>
+							<div class="number" id="k32">32</div>
+							<div class="number" id="k33">33</div>
+							<div class="number" id="k34">34</div>
+							<div class="number" id="k35">35</div>
+							<div class="number" id="k36">36</div>
+							<div class="number" id="k37">37</div>
+							<div class="number" id="k38">38</div>
+							<div class="number" id="k39">39</div>
+							<div class="number" id="k40">40</div>
+							<div class="number" id="k41">41</div>
+							<div class="number" id="k42">42</div>
+							<div class="number" id="k43">43</div>
+							<div class="number" id="k44">44</div>
+							<div class="number" id="k45">45</div>
+							<div class="number" id="k46">46</div>
+							<div class="number" id="k47">47</div>
+							<div class="number" id="k48">48</div>
+							<div class="number" id="k49">49</div>
+							<div class="number" id="k50">50</div>
+							<div class="number" id="k51">51</div>
+							<div class="number" id="k52">52</div>
+							<div class="number" id="k53">53</div>
+							<div class="number" id="k54">54</div>
+							<div class="number" id="k55">55</div>
+							<div class="number" id="k56">56</div>
+							<div class="number" id="k57">57</div>
+							<div class="number" id="k58">58</div>
+							<div class="number" id="k59">59</div>
+							<div class="number" id="k60">60</div>
+							<div class="number" id="k61">61</div>
+							<div class="number" id="k62">62</div>
+							<div class="number" id="k63">63</div>
+							<div class="number" id="k64">64</div>
+							<div class="number" id="k65">65</div>
+							<div class="number" id="k66">66</div>
+							<div class="number" id="k67">67</div>
+							<div class="number" id="k68">68</div>
+							<div class="number" id="k69">69</div>
+							<div class="number" id="k70">70</div>
+							<div class="number" id="k71">71</div>
+							<div class="number" id="k72">72</div>
+							<div class="number" id="k73">73</div>
+							<div class="number" id="k74">74</div>
+							<div class="number" id="k75">75</div>
+							<div class="number" id="k76">76</div>
+							<div class="number" id="k77">77</div>
+							<div class="number" id="k78">78</div>
+							<div class="number" id="k79">79</div>
+							<div class="number" id="k80">80</div>
+							<div class="number" id="k81">81</div>
+							<div class="number" id="k82">82</div>
+							<div class="number" id="k83">83</div>
+							<div class="number" id="k84">84</div>
+							<div class="number" id="k85">85</div>
+							<div class="number" id="k86">86</div>
+							<div class="number" id="k87">87</div>
+							<div class="number" id="k88">88</div>
+							<div class="number" id="k89">89</div>
+							<div class="number" id="k90">90</div>
+							<div class="number" id="k91">91</div>
+							<div class="number" id="k92">92</div>
+							<div class="number" id="k93">93</div>
+							<div class="number" id="k94">94</div>
+							<div class="number" id="k95">95</div>
+							<div class="number" id="k96">96</div>
+							<div class="number" id="k97">97</div>
+							<div class="number" id="k98">98</div>
+							<div class="number" id="k99">99</div>
+							<div class="number" id="k100">100</div>
+						</div>
+					</div>
+					<div class="triangle-left"></div>
+				</div>
+				<p id="testing"></p>
+				<p>{{ Page content }}</p>
+			</main>
+		</div>
+		<script> 
+			// # Variables
+			const fouchenlou = document.querySelector('.shike-clock'); // select the fouchenlou 
+			const form = document.getElementById('TimeConverter'); // for the listener event
+			let nIntervID; // current time interval
+			// # Functions
+			
+			// how long is a second in height of the fouchenlou? 
+			// fouchenlou is set at 2400 px. 86400 / 2400 = 36. 36 sec per pixel. 
+			// let fclHeight = fouchenlou.clientHeight;
+			// find the current time in seconds and move the slider that far down
+			
+			function currentTimeMath() {
+				const time = new Date();
+				const hours = time.getHours();
+				const minutes = time.getMinutes();
+				const seconds = time.getSeconds();
+				const timeInSeconds = seconds + (minutes * 60) + (hours * 60 * 60);
+
+				let n = (timeInSeconds / 36)
+				fouchenlou.style.transform = 
+				`translateY(${-n}px)`;
+				fouchenlou.style.transform;
+				// document.getElementById('n').innerHTML = timeInSeconds + '<br>' + n;
+			};
+
+			function currentTime() {
+				currentTimeMath()
+				if (!nIntervID) {
+					nIntervID = setInterval(() => {currentTimeMath()}, 3600);
+				}
+			}
+			
+			function convertTime(e) {
+				// release the currentTime interval 
+				clearInterval(nIntervId);
+				nIntervId = null;
+				
+				let cTime = e.target.value;
+				let cUnits = cTime.split(':');
+				let cHours = cUnits[0];
+				let cMinutes = cUnits[1];
+				let cTimeInSeconds = (cHours * 60 * 60) + (cMinutes * 60)
+
+				let n = (cTimeInSeconds / 36)
+				fouchenlou.style.transform = 
+				`translateY(${-n}px)`;
+				fouchenlou.style.transform;
+			}
+			
+			document.getElementById('TimeConverter').addEventListener('input', convertTime);
+			document.getElementById("convertButton").addEventListener("click", convertTime);
+			document.getElementById("currentButton").addEventListener("click", currentTime);
+		</script>
+	</body>
+</html>
